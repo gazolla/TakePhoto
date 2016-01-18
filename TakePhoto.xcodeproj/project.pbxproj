@@ -12,6 +12,15 @@
 		C313A3511C4445F100DDCD1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C313A34F1C4445F100DDCD1E /* LaunchScreen.storyboard */; };
 		C313A35C1C4445F100DDCD1E /* TakePhotoTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A35B1C4445F100DDCD1E /* TakePhotoTests.swift */; };
 		C313A3671C4445F100DDCD1E /* TakePhotoUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A3661C4445F100DDCD1E /* TakePhotoUITests.swift */; };
+		C313A3751C44462300DDCD1E /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A3741C44462300DDCD1E /* MainViewController.swift */; };
+		C313A37D1C44464B00DDCD1E /* CountDownController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A3771C44464B00DDCD1E /* CountDownController.swift */; };
+		C313A37E1C44464B00DDCD1E /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A3781C44464B00DDCD1E /* CustomTableViewCell.swift */; };
+		C313A37F1C44464B00DDCD1E /* PopUpController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A3791C44464B00DDCD1E /* PopUpController.swift */; };
+		C313A3801C44464B00DDCD1E /* SCLAlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A37A1C44464B00DDCD1E /* SCLAlertView.swift */; };
+		C313A3811C44464B00DDCD1E /* Sound.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A37B1C44464B00DDCD1E /* Sound.swift */; };
+		C313A3821C44464B00DDCD1E /* UIKitExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A37C1C44464B00DDCD1E /* UIKitExtensions.swift */; };
+		C3F1B4451C46E9F3009D3F34 /* ImageListController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1B4441C46E9F3009D3F34 /* ImageListController.swift */; };
+		C3F1B4471C46EBC5009D3F34 /* CustomCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C3F1B4461C46EBC5009D3F34 /* CustomCollectionViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +52,15 @@
 		C313A3621C4445F100DDCD1E /* TakePhotoUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TakePhotoUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C313A3661C4445F100DDCD1E /* TakePhotoUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TakePhotoUITests.swift; sourceTree = "<group>"; };
 		C313A3681C4445F100DDCD1E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C313A3741C44462300DDCD1E /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		C313A3771C44464B00DDCD1E /* CountDownController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CountDownController.swift; sourceTree = "<group>"; };
+		C313A3781C44464B00DDCD1E /* CustomTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		C313A3791C44464B00DDCD1E /* PopUpController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PopUpController.swift; sourceTree = "<group>"; };
+		C313A37A1C44464B00DDCD1E /* SCLAlertView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SCLAlertView.swift; sourceTree = "<group>"; };
+		C313A37B1C44464B00DDCD1E /* Sound.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Sound.swift; sourceTree = "<group>"; };
+		C313A37C1C44464B00DDCD1E /* UIKitExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIKitExtensions.swift; sourceTree = "<group>"; };
+		C3F1B4441C46E9F3009D3F34 /* ImageListController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImageListController.swift; sourceTree = "<group>"; };
+		C3F1B4461C46EBC5009D3F34 /* CustomCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCollectionViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,10 +111,14 @@
 		C313A34A1C4445F100DDCD1E /* TakePhoto */ = {
 			isa = PBXGroup;
 			children = (
+				C313A3761C44464B00DDCD1E /* Utils */,
 				C313A34B1C4445F100DDCD1E /* AppDelegate.swift */,
 				C313A34D1C4445F100DDCD1E /* Assets.xcassets */,
 				C313A34F1C4445F100DDCD1E /* LaunchScreen.storyboard */,
 				C313A3521C4445F100DDCD1E /* Info.plist */,
+				C313A3741C44462300DDCD1E /* MainViewController.swift */,
+				C3F1B4441C46E9F3009D3F34 /* ImageListController.swift */,
+				C3F1B4461C46EBC5009D3F34 /* CustomCollectionViewCell.swift */,
 			);
 			path = TakePhoto;
 			sourceTree = "<group>";
@@ -117,6 +139,19 @@
 				C313A3681C4445F100DDCD1E /* Info.plist */,
 			);
 			path = TakePhotoUITests;
+			sourceTree = "<group>";
+		};
+		C313A3761C44464B00DDCD1E /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				C313A3771C44464B00DDCD1E /* CountDownController.swift */,
+				C313A3781C44464B00DDCD1E /* CustomTableViewCell.swift */,
+				C313A3791C44464B00DDCD1E /* PopUpController.swift */,
+				C313A37A1C44464B00DDCD1E /* SCLAlertView.swift */,
+				C313A37B1C44464B00DDCD1E /* Sound.swift */,
+				C313A37C1C44464B00DDCD1E /* UIKitExtensions.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -249,7 +284,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C313A3811C44464B00DDCD1E /* Sound.swift in Sources */,
+				C3F1B4471C46EBC5009D3F34 /* CustomCollectionViewCell.swift in Sources */,
 				C313A34C1C4445F100DDCD1E /* AppDelegate.swift in Sources */,
+				C313A3751C44462300DDCD1E /* MainViewController.swift in Sources */,
+				C3F1B4451C46E9F3009D3F34 /* ImageListController.swift in Sources */,
+				C313A37E1C44464B00DDCD1E /* CustomTableViewCell.swift in Sources */,
+				C313A37F1C44464B00DDCD1E /* PopUpController.swift in Sources */,
+				C313A3801C44464B00DDCD1E /* SCLAlertView.swift in Sources */,
+				C313A3821C44464B00DDCD1E /* UIKitExtensions.swift in Sources */,
+				C313A37D1C44464B00DDCD1E /* CountDownController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +510,7 @@
 				C313A36D1C4445F100DDCD1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C313A36E1C4445F100DDCD1E /* Build configuration list for PBXNativeTarget "TakePhotoTests" */ = {
 			isa = XCConfigurationList;
@@ -474,6 +519,7 @@
 				C313A3701C4445F100DDCD1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C313A3711C4445F100DDCD1E /* Build configuration list for PBXNativeTarget "TakePhotoUITests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +528,7 @@
 				C313A3731C4445F100DDCD1E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
