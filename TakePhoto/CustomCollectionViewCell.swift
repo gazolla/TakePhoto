@@ -29,7 +29,13 @@ class CustomCollectionViewCell: UICollectionViewCell {
     
     override func layoutSubviews() {
         super.layoutSubviews()
-        self.imageView.frame = self.bounds
+        self.imageView.frame = self.contentView.bounds
     }
+    
+    override func prepareForReuse() {
+        super.prepareForReuse()
+        self.imageView.image = nil
+    }
+
 
 }

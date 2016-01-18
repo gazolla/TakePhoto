@@ -26,7 +26,7 @@ class ImageListController: UIViewController , UICollectionViewDataSource, UIColl
     
     lazy var flowLayout:UICollectionViewFlowLayout = {
         var flow = UICollectionViewFlowLayout()
-        flow.sectionInset = UIEdgeInsetsMake(2.0, 2.0, 2.0, 2.0)
+        flow.sectionInset = UIEdgeInsetsMake(2.0, 20.0, 2.0, 20.0)
         return flow
     }()
     
@@ -37,15 +37,19 @@ class ImageListController: UIViewController , UICollectionViewDataSource, UIColl
         self.view.addSubview(self.collectionView)
         
         self.setupNavBar()
+        self.loadImages()
     }
     
     func setupNavBar(){
         self.title = "Images:"
-        
         self.leftButton = UIBarButtonItem(barButtonSystemItem: UIBarButtonSystemItem.Stop, target: self, action: "dismissTapped:")
-
         self.navigationItem.leftBarButtonItem = self.leftButton
-
+    }
+    
+    func loadImages(){
+       let ph = PhotoHandler()
+       self.imgNameItems = ph.listPhotos()
+       self.collectionView.reloadData()
     }
     
     func dismissTapped(sender:UIButton){
@@ -57,11 +61,17 @@ class ImageListController: UIViewController , UICollectionViewDataSource, UIColl
         // Dispose of any resources that can be recreated.
     }
     
+    
     func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize{
         
-        let imgDimension = (self.view.bounds.width/2) - 5
-        let width:CGFloat = imgDimension
-        let height:CGFloat = imgDimension
+        let ph = PhotoHandler()
+        let imgName = self.imgNameItems[indexPath.row]
+        let img = ph.loadPhoto(imgName)
+      
+        let imgDimension = (self.view.bounds.width/2) - 20
+ 
+        let width:CGFloat = (img?.size.width < img?.size.height) ? (imgDimension * 0.74 ) : imgDimension
+        let height:CGFloat = (img?.size.width < img?.size.height) ? imgDimension  : (imgDimension * 0.74)
         
         return CGSizeMake(width, height)
     }
@@ -71,6 +81,10 @@ class ImageListController: UIViewController , UICollectionViewDataSource, UIColl
         self.flowLayout.invalidateLayout()
     }
     
+    func numberOfSectionsInCollectionView(collectionView: UICollectionView) -> Int {
+        return 1
+    }
+    
     func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int{
         return self.imgNameItems.count
     }
@@ -78,9 +92,12 @@ class ImageListController: UIViewController , UICollectionViewDataSource, UIColl
     func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCellWithReuseIdentifier("cell", forIndexPath: indexPath) as! CustomCollectionViewCell
         
+        let ph = PhotoHandler()
         let imgName = self.imgNameItems[indexPath.row]
+        let img = ph.loadPhoto(imgName)
         
-        cell.imageView.image = UIImage(named: imgName)
+        cell.imageView.image = img
+        print(cell.imageView.image!.imageOrientation)
         cell.layer.borderWidth = 0.5
         cell.layer.borderColor = UIButton().tintColor?.CGColor
         cell.layer.cornerRadius = 4

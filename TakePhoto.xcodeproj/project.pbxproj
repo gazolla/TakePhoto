@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		086149E61C4BF3D100CE2B61 /* PhotoHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = 086149E51C4BF3D100CE2B61 /* PhotoHandler.swift */; };
 		C313A34C1C4445F100DDCD1E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C313A34B1C4445F100DDCD1E /* AppDelegate.swift */; };
 		C313A34E1C4445F100DDCD1E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C313A34D1C4445F100DDCD1E /* Assets.xcassets */; };
 		C313A3511C4445F100DDCD1E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C313A34F1C4445F100DDCD1E /* LaunchScreen.storyboard */; };
@@ -41,6 +42,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		086149E51C4BF3D100CE2B61 /* PhotoHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PhotoHandler.swift; sourceTree = "<group>"; };
 		C313A3481C4445F000DDCD1E /* TakePhoto.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TakePhoto.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C313A34B1C4445F100DDCD1E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C313A34D1C4445F100DDCD1E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,6 +121,7 @@
 				C313A3741C44462300DDCD1E /* MainViewController.swift */,
 				C3F1B4441C46E9F3009D3F34 /* ImageListController.swift */,
 				C3F1B4461C46EBC5009D3F34 /* CustomCollectionViewCell.swift */,
+				086149E51C4BF3D100CE2B61 /* PhotoHandler.swift */,
 			);
 			path = TakePhoto;
 			sourceTree = "<group>";
@@ -291,6 +294,7 @@
 				C3F1B4451C46E9F3009D3F34 /* ImageListController.swift in Sources */,
 				C313A37E1C44464B00DDCD1E /* CustomTableViewCell.swift in Sources */,
 				C313A37F1C44464B00DDCD1E /* PopUpController.swift in Sources */,
+				086149E61C4BF3D100CE2B61 /* PhotoHandler.swift in Sources */,
 				C313A3801C44464B00DDCD1E /* SCLAlertView.swift in Sources */,
 				C313A3821C44464B00DDCD1E /* UIKitExtensions.swift in Sources */,
 				C313A37D1C44464B00DDCD1E /* CountDownController.swift in Sources */,

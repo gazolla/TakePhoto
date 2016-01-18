@@ -94,25 +94,13 @@ class MainViewController: UIViewController, UIImagePickerControllerDelegate, UIN
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [String : AnyObject]) {
        
-        let mediaType = info[UIImagePickerControllerMediaType] as! String
+        let img = info[UIImagePickerControllerOriginalImage] as! UIImage
         
-        self.dismissViewControllerAnimated(true, completion: nil)
+        let ph = PhotoHandler()
+        ph.savePhoto(img)
+        picker.dismissViewControllerAnimated(true) {}
+        UIImageWriteToSavedPhotosAlbum(img, self, "image:didFinishSavingWithError:contextInfo:", nil)
         
-        if mediaType == (kUTTypeImage as String) {
-            let image = info[UIImagePickerControllerOriginalImage]
-                as! UIImage
-            
-           // picker.image = image
-            
-            if (newMedia == true) {
-                UIImageWriteToSavedPhotosAlbum(image, self,
-                    "image:didFinishSavingWithError:contextInfo:", nil)
-            } else if mediaType == (kUTTypeMovie as String) {
-                // Code to support video here
-            }
-            
-        }
-
         
     }
 
